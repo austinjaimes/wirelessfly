@@ -1,0 +1,8 @@
+[dev]
+  command = "pnpm dev"
+  framework = "astro"
+
+[build]
+  command = "pnpm build"
+  publish = "dist"
+  functions = "netlify/functions/"
