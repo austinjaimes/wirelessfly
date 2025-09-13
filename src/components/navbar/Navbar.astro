@@ -216,6 +216,10 @@ body.menu-open::before {
   background: rgba(0, 0, 0, 0.5);
   z-index: 9998;
 }
+body.menu-open {
+  overflow: hidden;
+  height: 100vh; /* opcional: evita que se pueda hacer scroll incluso con touch en móviles */
+}
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
@@ -262,7 +266,9 @@ body.menu-open::before {
 
     <ul class="nav-links">
       <li class="linkhover"><a href="/servicios">Servicios</a></li>
+      <li class="linkhover"><a href="/paquetes">Paquetes</a></li>
       <li class="linkhover"><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+      <li class="linkhover"><a href="/horario">Horario</a></li>
       <li><a href="/contacto"><button>CONTACTO</button></a></li>
       <!-- <div class="search-icon">🔍</div> -->
     </ul>
@@ -286,6 +292,8 @@ body.menu-open::before {
       </div>
     </li> -->
     <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+    <li class="linkhover"><a href="/paquetes">Paquetes</a></li>
+    <li class="linkhover"><a href="/horario">Horario</a></li>
     <li><a href="/contacto">Contacto</a></li>
     <div style="flex-direction: column; align-items: center; justify-content: center; justify-items: center;">
       <li><a href="/"><img src="./logo.png" class="w-58" alt=""></a></li>
