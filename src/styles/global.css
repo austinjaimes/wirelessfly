@@ -94,7 +94,6 @@
 		@apply outline-outline !transition-none;
 	}
 	html {
-		@apply bg-background text-foreground leading-[1.6rem] scheme-light dark:scheme-dark;
 		scroll-behavior: smooth;
 		-moz-text-size-adjust: none;
 		-webkit-text-size-adjust: none;
