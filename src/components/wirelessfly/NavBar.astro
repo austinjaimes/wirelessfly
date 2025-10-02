@@ -1,7 +1,8 @@
 <style>
+/* ==================== NAV ==================== */
 nav {
-  background: rgba(0, 0, 0, 0.5); /* fondo negro translúcido */
-  backdrop-filter: blur(10px);     /* desenfoque */
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: white;
   position: fixed;
@@ -11,11 +12,10 @@ nav {
   z-index: 50;
 }
 
-/* reducimos altura */
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0.5rem 2rem; /* antes 1rem 2rem → ahora más bajo */
+  padding: 0.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,7 +47,6 @@ nav {
   list-style: none;
 }
 
-/* ENLACES NAV NORMALES */
 .nav-links li a {
   color: white;
   text-decoration: none;
@@ -57,14 +56,12 @@ nav {
   transition: all 0.3s ease;
 }
 
-/* GRADIENTE AL HACER HOVER */
 .nav-links li a:hover {
   background: linear-gradient(to right, #00bcd4, #3f51b5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* ACTIVO (PÁGINA ACTUAL) */
 .nav-links li a.active {
   background: linear-gradient(to right, #00bcd4, #3f51b5);
   -webkit-background-clip: text;
@@ -72,7 +69,6 @@ nav {
   font-weight: 600;
 }
 
-/* BOTÓN DE CONTACTO */
 .nav-links li button,
 .nav-links li a.button {
   background: transparent;
@@ -88,21 +84,17 @@ nav {
   line-height: 1.2;
 }
 
-/* HOVER BOTÓN */
 .nav-links li button:hover,
 .nav-links li a.button:hover {
- 
   color: black !important;
 }
 
-/* PARA EVITAR HOVER CON GRADIENTE EN BOTÓN */
 .nav-links li a.button:hover {
   -webkit-background-clip: initial;
   -webkit-text-fill-color: white;
   background: none;
 }
 
-/* TÍTULO */
 .site-title {
   list-style: none;
   font-size: 26px;
@@ -115,7 +107,6 @@ nav {
   margin-top: 0.5rem;
 }
 
-/* HAMBURGER */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -130,7 +121,7 @@ nav {
   transition: all 0.3s ease;
 }
 
-/* MENÚ RESPONSIVE */
+/* ==================== MENÚ MOBILE ==================== */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -181,26 +172,6 @@ nav {
   -webkit-text-fill-color: transparent;
 }
 
-.mobile-menu .arrow {
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
-}
-
-.mobile-menu li.open .arrow {
-  transform: rotate(180deg);
-}
-
-.dropdown-content {
-  display: none;
-  padding: 0.5rem 0 1rem 1rem;
-  font-size: 1rem;
-  color: #ccc;
-}
-
-.mobile-menu li.open .dropdown-content {
-  display: block;
-}
-
 .close-btn {
   font-size: 2rem;
   color: white;
@@ -208,7 +179,6 @@ nav {
   align-self: flex-end;
 }
 
-/* CUANDO SE ABRE EL MENÚ */
 body.menu-open .mobile-menu {
   left: 0;
 }
@@ -220,9 +190,10 @@ body.menu-open::before {
   background: rgba(0, 0, 0, 0.5);
   z-index: 9998;
 }
+
 body.menu-open {
   overflow: hidden;
-  height: 100vh; /* opcional: evita que se pueda hacer scroll incluso con touch en móviles */
+  height: 100vh;
 }
 
 /* RESPONSIVE */
@@ -230,23 +201,15 @@ body.menu-open {
   .hamburger {
     display: flex;
   }
-
   .nav-links {
     display: none;
   }
-
-  .search-icon {
-    display: none;
-  }
-
   .logo {
     margin: 0 auto;
   }
-
   .container {
     justify-content: space-between;
   }
-
   .site-title {
     list-style: none;
     font-size: 26px;
@@ -263,10 +226,11 @@ body.menu-open {
         <span></span>
         <span></span>
       </div>
-      
     </div>
 
-    <li class="site-title" style="list-style: none; font-size: 26px;"><a href="/"><img src="./assets/logo.png" class="w-28" alt="Logo"></a></li>
+    <li class="site-title" style="list-style: none; font-size: 26px;">
+      <a href="/"><img src="./assets/logo.png" class="w-28" alt="Logo"></a>
+    </li>
 
     <ul class="nav-links">
       <li class="linkhover"><a href="#servicios">Servicios</a></li>
@@ -274,26 +238,14 @@ body.menu-open {
       <li class="linkhover"><a href="#testimonios">Testimonios</a></li>
       <li class="linkhover"><a href="#horario">Horario</a></li>
       <li><a href="#contacto"><button>CONTACTO</button></a></li>
-      <!-- <div class="search-icon">🔍</div> -->
     </ul>
   </div>
-
   <div class="bottom-border"></div>
 </nav>
 
-<!-- Menú responsive oculto -->
 <div class="mobile-menu">
   <div class="close-btn" onclick="document.body.classList.remove('menu-open')">✕</div>
   <ul>
-    <!-- <li class="has-dropdown">
-      <a href="/servicios" onclick="event.preventDefault(); this.parentElement.classList.toggle('open')">
-        Servicios <span class="arrow">⌄</span>
-      </a>
-      <div class="dropdown-content">
-        <p>Comida</p>
-        <p>Ejercicio</p>
-      </div>
-    </li> -->
     <li><a href="#servicios">Servicios</a></li>
     <li class="linkhover"><a href="#paquetes">Paquetes</a></li>
     <li class="linkhover"><a href="#testimonios">Testimonios</a></li>
@@ -302,20 +254,26 @@ body.menu-open {
     <div style="flex-direction: column; align-items: center; justify-content: center; justify-items: center;">
       <li><a href="/"><img src="./assets/logo.png" class="w-58" alt=""></a></li>
     </div>
-    
   </ul>
 </div>
 
-
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const links = document.querySelectorAll(".nav-links li a");
-    const currentPath = window.location.pathname;
+document.addEventListener("DOMContentLoaded", () => {
+  // Marcar enlace activo
+  const links = document.querySelectorAll(".nav-links li a");
+  const currentPath = window.location.pathname;
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
 
-    links.forEach(link => {
-      if (link.getAttribute("href") === currentPath) {
-        link.classList.add("active");
-      }
+  // Cerrar menú mobile al hacer clic en un enlace
+  const mobileLinks = document.querySelectorAll(".mobile-menu a");
+  mobileLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      document.body.classList.remove("menu-open");
     });
   });
+});
 </script>
