@@ -158,3 +158,7 @@
 		animation-play-state: paused !important;
 	}
 }
+
+.bg-services {
+  background: linear-gradient(to top, rgba(48,219,195,0.2), rgba(48,219,195,0.1)) !important;
+}
