@@ -1,0 +1,111 @@
+---
+import "swiper/css";
+import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
+
+const testimonialData = [
+  {
+    nombre: "Juan Pérez",
+    mensaje: "Excelente servicio y conexión estable. Ahora trabajo remoto y streaming sin problemas.",
+    puesto: "Cliente",
+    foto: "https://randomuser.me/api/portraits/men/32.jpg"
+  },
+  {
+    nombre: "María López",
+    mensaje: "La instalación fue rápida y el soporte siempre disponible. Muy recomendable.",
+    puesto: "Cliente",
+    foto: "https://randomuser.me/api/portraits/women/44.jpg"
+  },
+  {
+    nombre: "Carlos Ruiz",
+    mensaje: "Internet confiable para toda la familia, nunca hemos tenido interrupciones.",
+    puesto: "Cliente",
+    foto: "https://randomuser.me/api/portraits/men/56.jpg"
+  },
+  {
+    nombre: "Ana Gómez",
+    mensaje: "El personal es atento y profesional. Muy satisfecha con el servicio.",
+    puesto: "Cliente",
+    foto: "https://randomuser.me/api/portraits/women/68.jpg"
+  },
+];
+---
+
+<section class="py-24 bg-gradient-to-t from-[#30DBC3]/20 to-[#30DBC3]/10">
+  <div class="max-w-6xl mx-auto text-center mb-12 px-4">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-blue-900 mb-4">Lo Que Dicen Nuestros Clientes</h2>
+    <p class="text-gray-700 text-lg md:text-xl max-w-2xl mx-auto">
+      Disfruta de internet rápido y estable en tu hogar con Wireless Fly. Clientes satisfechos en Palmillas y alrededores.
+    </p>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto">
+    <!-- Swiper -->
+    <div class="swiper testimonials-swiper overflow-hidden mb-8">
+      <div class="swiper-wrapper">
+        {testimonialData.map((t) => (
+          <div class="swiper-slide px-2 md:px-4">
+            <div class="bg-white/30 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-6 h-full flex flex-col justify-between transition-transform transform hover:scale-105">
+              <div class="flex items-center gap-4 mb-4">
+                <img src={t.foto} alt={t.nombre} class="w-14 h-14 rounded-full object-cover border-2 border-white/50" />
+                <div>
+                  <h4 class="font-semibold text-blue-900">{t.nombre}</h4>
+                  <p class="text-sm text-gray-700">{t.puesto}</p>
+                </div>
+              </div>
+              <p class="text-gray-800 text-base md:text-lg">"{t.mensaje}"</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Botones de navegación abajo centrados -->
+    <div class="flex justify-center gap-4">
+      <button class="testimonial-swiper-button-prev border-2 border-blue-900 text-blue-900 rounded-full p-3 hover:bg-blue-900 hover:text-white transition shadow-lg">
+        ◀
+      </button>
+      <button class="testimonial-swiper-button-next border-2 border-blue-900 text-blue-900 rounded-full p-3 hover:bg-blue-900 hover:text-white transition shadow-lg">
+        ▶
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  import Swiper from "swiper";
+  import { Navigation } from "swiper/modules";
+
+  const swiper = new Swiper(".testimonials-swiper", {
+    modules: [Navigation],
+    slidesPerView: 1.05,
+    spaceBetween: 16,
+    loop: true,
+    grabCursor: true,
+    centeredSlides: false,
+    navigation: {
+      nextEl: ".testimonial-swiper-button-next",
+      prevEl: ".testimonial-swiper-button-prev",
+    },
+    breakpoints: {
+      480: { slidesPerView: 1.2, spaceBetween: 16 },
+      640: { slidesPerView: 1.3, spaceBetween: 18 },
+      768: { slidesPerView: 1.5, spaceBetween: 20 },
+      1024: { slidesPerView: 2, spaceBetween: 24 },
+      1280: { slidesPerView: 2.3, spaceBetween: 28 },
+      1600: { slidesPerView: 2.5, spaceBetween: 32 },
+    },
+  });
+</script>
+
+<style>
+  .swiper {
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .swiper-slide {
+    display: flex;
+    height: 100%;
+  }
+</style>
