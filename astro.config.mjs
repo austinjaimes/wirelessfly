@@ -12,7 +12,7 @@ import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://wirelessfly.netlify.app",
+	site: "https://wirelessfly.com.mx",
 	adapter: netlify({
 		imageCDN: false,
 	}),
