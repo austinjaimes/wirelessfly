@@ -1,13 +1,14 @@
-<footer class="bg-gray-900 text-gray-300 pt-10 pb-4">
-  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-12">
-    
+<footer class="bg-gray-900 text-gray-300 pt-12 pb-4">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-5 gap-12">
+
     <!-- Logo + descripción -->
-    <div>
+    <div class="md:col-span-2">
       <a href="/#inicio" class="flex items-center mb-4">
-        <img src="./assets/logo.png" class="h-30" alt="Wireless Fly Logo" />
+        <img src="./assets/logo.png" class="h-20" alt="Wireless Fly Logo" />
       </a>
-      <p class="text-gray-400">
-        Disfruta del mejor internet en Palmillas. Con Wireless Fly tu conexión es rápida, segura y confiable.
+      <p class="text-gray-400 max-w-md">
+        Disfruta del mejor internet en Palmillas. Con Wireless Fly tu conexión es rápida,
+        segura y confiable, respaldada por un servicio profesional.
       </p>
     </div>
 
@@ -18,7 +19,6 @@
         <li><a href="/#inicio" class="hover:text-cyan-400 transition">Inicio</a></li>
         <li><a href="/#servicios" class="hover:text-cyan-400 transition">Servicios</a></li>
         <li><a href="/#paquetes" class="hover:text-cyan-400 transition">Paquetes</a></li>
-        <li><a href="/#testimonios" class="hover:text-cyan-400 transition">Testimonios</a></li>
         <li><a href="/#horario" class="hover:text-cyan-400 transition">Horario</a></li>
         <li><a href="/#soporte" class="hover:text-cyan-400 transition">Soporte</a></li>
         <li><a href="/#contacto" class="hover:text-cyan-400 transition">Contacto</a></li>
@@ -29,43 +29,83 @@
     <div>
       <h4 class="text-white font-semibold mb-4">Contacto</h4>
       <ul class="space-y-2 text-gray-400">
-        <li>Teléfono: <a href="tel:+521234567890" class="hover:text-cyan-400 transition">+52 222 310 0206</a></li>
-        <li>WhatsApp: <a href="https://wa.me/522223100206?text=Hola%20Wireless%20Fly" target="_blank" class="hover:text-cyan-400 transition">Chatea con nosotros</a></li>
-        <li>Email: <a href="mailto:contacto@wirelessfly.com" class="hover:text-cyan-400 transition">wirelessflyatencion@gmail.com</a></li>
+        <li>
+          Teléfono:
+          <a href="tel:+522223100206" class="hover:text-cyan-400 transition">
+            +52 222 310 0206
+          </a>
+        </li>
+        <li>
+          WhatsApp:
+          <a
+            href="https://wa.me/522223100206?text=Hola%20Wireless%20Fly,%20quiero%20información%20sobre%20sus%20servicios"
+            target="_blank"
+            class="hover:text-cyan-400 transition"
+          >
+            Chatea con nosotros
+          </a>
+        </li>
+        <li>
+          Email:
+          <a
+            href="mailto:wirelessflyatencion@gmail.com"
+            class="hover:text-cyan-400 transition"
+          >
+            wirelessflyatencion@gmail.com
+          </a>
+        </li>
         <li>Dirección: Palmillas, Guerrero, México</li>
       </ul>
     </div>
 
-    <!-- Redes sociales -->
+    <!-- Legal -->
     <div>
-      <h4 class="text-white font-semibold mb-4">Síguenos</h4>
-      <div class="flex gap-4">
-        <a href="#" aria-label="Facebook"
-          ><img
-            style="width: 50px;"
-            src="https://static.vecteezy.com/system/resources/previews/018/930/698/non_2x/facebook-logo-facebook-icon-transparent-free-png.png"
-            alt="Facebook"
-          /></a
-        >
-        <a href="#" aria-label="Twitter"
-          ><img
-            style="width: 50px;"
-            src="https://static.vecteezy.com/system/resources/previews/042/148/611/non_2x/new-twitter-x-logo-twitter-icon-x-social-media-icon-free-png.png"
-            alt="Twitter"
-          /></a
-        >
-        <a href="#" aria-label="Instagram"
-          ><img
-            style="width: 50px;"
-            src="https://static.vecteezy.com/system/resources/thumbnails/045/934/225/small/instagram-logo-icon-transparent-background-free-png.png"
-            alt="Instagram"
-          /></a
-        >
-      </div>
+      <h4 class="text-white font-semibold mb-4">Información legal</h4>
+      <ul class="space-y-2 text-gray-400">
+        <li>
+          <a href="/docs/AVISO-DE-PRIVACIDAD.pdf" target="_blank" class="hover:text-cyan-400 transition">
+            Aviso de privacidad
+          </a>
+        </li>
+        <li>
+          <a href="/docs/CONTRATO-DE-ADHESION.pdf" target="_blank" class="hover:text-cyan-400 transition">
+            Contrato de adhesión
+          </a>
+        </li>
+        <li>
+          <a href="#documentos-legales" class="hover:text-cyan-400 transition">
+            Documentos legales
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 
-  <div class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">
-    &copy; {new Date().getFullYear()} Wireless Fly. Todos los derechos reservados.
+  <!-- Redes + copyright -->
+  <div class="border-t border-gray-700 mt-12 pt-6">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex gap-5">
+        <a href="#" aria-label="Facebook">
+          <img class="w-8 opacity-80 hover:opacity-100 transition"
+            src="https://static.vecteezy.com/system/resources/previews/018/930/698/non_2x/facebook-logo-facebook-icon-transparent-free-png.png"
+            alt="Facebook" />
+        </a>
+        <a href="#" aria-label="Twitter">
+          <img class="w-8 opacity-80 hover:opacity-100 transition"
+            src="https://static.vecteezy.com/system/resources/previews/042/148/611/non_2x/new-twitter-x-logo-twitter-icon-x-social-media-icon-free-png.png"
+            alt="Twitter" />
+        </a>
+        <a href="#" aria-label="Instagram">
+          <img class="w-8 opacity-80 hover:opacity-100 transition"
+            src="https://static.vecteezy.com/system/resources/thumbnails/045/934/225/small/instagram-logo-icon-transparent-background-free-png.png"
+            alt="Instagram" />
+        </a>
+      </div>
+
+      <p class="text-gray-500 text-sm text-center">
+        &copy; {new Date().getFullYear()} Wireless Fly. Todos los derechos reservados.
+      </p>
+    </div>
   </div>
 </footer>
