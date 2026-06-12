@@ -2,11 +2,11 @@ import { type SiteDataProps } from "../types/configDataTypes";
 
 // Update this file with your site specific information
 const siteData: SiteDataProps = {
-	name: "WirelessFly",
+	name: "AvixFly",
 	// Your website's title and description (meta fields)
-	title: "WirelessFly",
+	title: "AvixFly",
 	description:
-		"Wireless Fly: Internet rápido, confiable y estable para tu hogar. Descubre nuestros planes y disfruta de conexión sin interrupciones en todo Guerrero.",
+		"Avix Fly: Internet rápido, confiable y estable para tu hogar. Descubre nuestros planes y disfruta de conexión sin interrupciones en todo Guerrero.",
 
 	// used on contact page and footer
 	contact: {
